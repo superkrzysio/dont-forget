@@ -1,0 +1,7 @@
+<table>
+<tr th:each="event: ${events}">
+    <td th:text="${event.id}" />
+    <td th:text="${event.title}" />
+    <td th:text="${event.description}" />
+</tr>
+</table>
