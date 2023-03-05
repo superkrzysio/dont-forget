@@ -1,0 +1,18 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Manage one-time event</h1>
+<form action="/save" method="post">
+    <input type="hidden" name="eventType" th:field="${event.eventType}">
+    <input type="hidden" name="id" th:field="${event.id}">
+    <label for="title">Event title:</label><input type="text" id="title" name="title" th:field="${event.title}"/><br/>
+    <label for="description">Event description:</label><textarea id="description" name="description" th:field="${event.description}"></textarea><br/>
+    <label for="date">Event due date:</label><input type="date" id="date" name="dueDate" placeholder="DD-MM-YYYY" th:field="${event.dueDate}"/><br/>
+    <label for="warningLevel1">Warning threshold:</label><input type="text" id="warningLevel1" name="warningLevel1" placeholder="days before" th:field="${event.warningLevel1}"/><br/>
+    <label for="warningLevel2">Alert threshold:</label><input type="text" id="warningLevel2" name="warningLevel2" placeholder="days before" th:field="${event.warningLevel2}"/><br/>
+    <input type="submit" value="Save"/>
+</form>
+</body>
+</html>

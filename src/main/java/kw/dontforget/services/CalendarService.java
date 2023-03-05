@@ -59,6 +59,11 @@ public class CalendarService
         }
     }
 
+    public int daysRemaining(final LocalDate until)
+    {
+        return (int) Duration.between(LocalDate.now(clock).atStartOfDay(), until.atStartOfDay()).toDays();
+    }
+
     private static void recurrenceConfigMustBeValidForAllMonths(DayOfMonthBasedRecurrence recurrence)
     {
         final int sampleNonLeapYear = 2021;

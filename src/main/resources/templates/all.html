@@ -1,7 +1,14 @@
+<html>
+<body>
 <table>
-<tr th:each="event: ${events}">
-    <td th:text="${event.id}" />
-    <td th:text="${event.title}" />
-    <td th:text="${event.description}" />
-</tr>
+    <tr th:each="event: ${events}">
+        <td><a th:href="'/edit-event/' + ${event.id}" th:text="${event.id}"/></td>
+        <td th:text="${event.title}"/>
+        <td th:text="${event.description}"/>
+        <td th:text="${event.dueDate}"/>
+        <td><a th:href="'/delete-event/' + ${event.id}"><b>✗</b></a></td>
+    </tr>
 </table>
+<a href="add-event">Add event</a> | <a href="add-recursion">Add recursive rule</a>
+</body>
+</html>

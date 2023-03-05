@@ -16,7 +16,7 @@ public class Event {
     @Column(length = 2000)
     private String description;
     private LocalDate dueDate;
-    private EventType eventType;
+    private EventType eventType = EventType.NORMAL;
 
     private int warningLevel1 = 2;  // yellow color
 
@@ -27,7 +27,8 @@ public class Event {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(final int id)
+    {
         this.id = id;
     }
 
@@ -35,7 +36,8 @@ public class Event {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(final String title)
+    {
         this.title = title;
     }
 
@@ -43,7 +45,8 @@ public class Event {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(final String description)
+    {
         this.description = description;
     }
 
@@ -51,7 +54,8 @@ public class Event {
         return dueDate;
     }
 
-    public void setDueDate(LocalDate dueDate) {
+    public void setDueDate(final LocalDate dueDate)
+    {
         this.dueDate = dueDate;
     }
 
@@ -59,7 +63,8 @@ public class Event {
         return eventType;
     }
 
-    public void setEventType(EventType eventType) {
+    public void setEventType(final EventType eventType)
+    {
         this.eventType = eventType;
     }
 
@@ -67,7 +72,8 @@ public class Event {
         return warningLevel1;
     }
 
-    public void setWarningLevel1(int warningLevel1) {
+    public void setWarningLevel1(final int warningLevel1)
+    {
         this.warningLevel1 = warningLevel1;
     }
 
@@ -75,7 +81,8 @@ public class Event {
         return warningLevel2;
     }
 
-    public void setWarningLevel2(int warningLevel2) {
+    public void setWarningLevel2(final int warningLevel2)
+    {
         this.warningLevel2 = warningLevel2;
     }
 }
