@@ -1,8 +1,10 @@
 # Don't forget
 
-This application shows a big tiles about incoming deadlines. It's meant to be displayed constantly on some screen at home to have a quick glance on incoming important dates - simply an information radiator to make you not forget.
+This application shows big tiles about incoming deadlines. It's meant to be displayed constantly on some screen at home
+to have a quick glance on incoming important dates - simply an information radiator to make you not forget.
 
-Take your time, fulfill the task whenever you want, but the big red button will remind you in your home's corridor, so that you don't forget.
+Take your time, fulfill the task whenever you want, but the big red button will remind you in your home's corridor, so
+that you don't forget.
 
 It may duplicate with your google calendar or work calendar, but it's not a 1000th notification on your phone that you can ignore when in uncomfortable moment or just accidentaly. You won't forget.
 

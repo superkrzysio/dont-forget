@@ -1,4 +1,4 @@
-package kw.dontforget.persistence;
+package kw.dontforget.models;
 
 public enum EventType {
     NORMAL,

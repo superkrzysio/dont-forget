@@ -1,8 +1,8 @@
 package kw.dontforget;
 
-import kw.dontforget.persistence.Event;
+import kw.dontforget.models.Event;
+import kw.dontforget.models.EventType;
 import kw.dontforget.persistence.EventRepository;
-import kw.dontforget.persistence.EventType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

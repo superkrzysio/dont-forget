@@ -1,4 +1,4 @@
-package kw.dontforget.persistence;
+package kw.dontforget.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
