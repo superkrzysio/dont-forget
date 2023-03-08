@@ -1,0 +1,29 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<a href="/events/"><- Back</a><br/><br/>
+<h1>View one-time event</h1>
+<label for="title">Event title:</label><span id="title" th:text="${event.title}"></span><br/>
+<label for="description">Event description:</label><span id="description" th:text="${event.description}"></span><br/>
+<label for="due-date">Event due date:</label><span id="due-date" th:text="${event.dueDate}"></span><br/>
+<label for="remaining">Days remaining:</label><span id="remaining" th:text="${remaining}"></span><br/>
+<label for="completed">Is completed:</label><span id="completed" th:text="${!event.active}"></span><br/>
+<label for="level">Level:</label><span id="level" th:text="${level}"></span><br/>
+<label for="postpone">Postpone:</label><span id="postpone">
+    <a th:href="'/events/postpone/' + ${event.id} + '/1'">+1</a>
+    <a th:href="'/events/postpone/' + ${event.id} + '/2'">+2</a>
+    <a th:href="'/events/postpone/' + ${event.id} + '/3'">+3</a>
+    <a th:href="'/events/postpone/' + ${event.id} + '/4'">+4</a>
+    <a th:href="'/events/postpone/' + ${event.id} + '/5'">+5</a>
+    <a th:href="'/events/postpone/' + ${event.id} + '/6'">+6</a>
+    <a th:href="'/events/postpone/' + ${event.id} + '/7'">+7</a>
+    <a th:href="'/events/postpone/' + ${event.id} + '/14'">+14</a>
+    <a th:href="'/events/postpone/' + ${event.id} + '/21'">+21</a>
+    <a th:href="'/events/postpone/' + ${event.id} + '/30'">+30</a>
+</span><br/>
+<a th:href="'/events/complete/' + ${event.id}">Mark as complete</a><br/>
+
+</body>
+</html>

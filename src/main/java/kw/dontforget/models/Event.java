@@ -1,5 +1,7 @@
 package kw.dontforget.models;
 
+import org.hibernate.annotations.ColumnDefault;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,8 +24,12 @@ public class Event {
 
     private int warningLevel2 = 0;  // red color
 
+    @ColumnDefault("true")
+    private boolean active = true;
 
-    public int getId() {
+
+    public int getId()
+    {
         return id;
     }
 
@@ -32,7 +38,8 @@ public class Event {
         this.id = id;
     }
 
-    public String getTitle() {
+    public String getTitle()
+    {
         return title;
     }
 
@@ -68,7 +75,8 @@ public class Event {
         this.eventType = eventType;
     }
 
-    public int getWarningLevel1() {
+    public int getWarningLevel1()
+    {
         return warningLevel1;
     }
 
@@ -77,12 +85,23 @@ public class Event {
         this.warningLevel1 = warningLevel1;
     }
 
-    public int getWarningLevel2() {
+    public int getWarningLevel2()
+    {
         return warningLevel2;
     }
 
     public void setWarningLevel2(final int warningLevel2)
     {
         this.warningLevel2 = warningLevel2;
+    }
+
+    public boolean isActive()
+    {
+        return active;
+    }
+
+    public void setActive(final boolean active)
+    {
+        this.active = active;
     }
 }

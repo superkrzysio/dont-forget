@@ -1,14 +1,16 @@
-<html>
+<html xmlns:th="https://www.thymeleaf.org">
 <body>
 <table>
     <tr th:each="event: ${events}">
-        <td><a th:href="'/edit-event/' + ${event.id}" th:text="${event.id}"/></td>
-        <td th:text="${event.title}"/>
-        <td th:text="${event.description}"/>
-        <td th:text="${event.dueDate}"/>
-        <td><a th:href="'/delete-event/' + ${event.id}"><b>✗</b></a></td>
+        <td th:text="${event.id}"></td>
+        <td th:text="${event.title}"></td>
+        <td th:text="${event.description}"></td>
+        <td th:text="${event.dueDate}"></td>
+        <td><a th:href="'/events/view/' + ${event.id}">👁</a></td>
+        <td><a th:href="'/events/edit/' + ${event.id}">✎</a></td>
+        <td><a th:href="'/events/delete/' + ${event.id}"><b>✗</b></a></td>
     </tr>
 </table>
-<a href="add-event">Add event</a> | <a href="add-recursion">Add recursive rule</a>
+<a href="/events/add">Add event</a> | <a href="/recursion/add">Add recursive rule</a>
 </body>
 </html>
